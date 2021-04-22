@@ -8,7 +8,7 @@ The Spectrum samples the signal 256 times at a sampling frequency of ~16kHz, so 
 
 ## Basic Operation:
 
-~[](Images/Basic Operation.png)
+~[](Images/Basic%20Operation.png)
 
 ## Schematic:
 
