@@ -24,7 +24,7 @@ PB7 - I2C1 SDA
 
 ## Personal Accomplishments:
 
-* Successfully built a Audio Spectrum Analyzer
+* Successfully built an Audio Spectrum Analyzer
 * Everything in this project is bare metal, no libraries or external functions used (fix_fft.c FFT function only exception)
 * Successfully configured all peripherals: GPIO, ADC, I2C
 * Built a custom driver for Hitachi LCD with i2c module from scratch, can be reused for other projects
