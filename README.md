@@ -2,7 +2,7 @@
 
 Chosen Class Project for ECE 692 - Embedded Computing Systems
 
-The goal of this project was to develop a device that would show the frequency domain spectrum of a sampled audio signal on a 16x2 LCD.
+The goal of this project was to develop a device that would show the frequency spectrum with 16 bands of precision of a sampled audio signal on a 16x2 LCD.
 
 The Spectrum samples the signal 256 times at a sampling frequency of ~16kHz, so the spectrum is shows the range 0Hz to ~8kHz using 16 bands. There is no circuitry that filters frequencies above 8kHz, aliasing will occur and there is nothing is stop it beware! The large majority of music stays within 0Hz to 10kHz depending on what you are listening to. Looking at audio frequency charts we can see there is more precision for lower frequencies (bass) and less precision as we climb up to midrage and eventually high range.
 
