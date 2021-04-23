@@ -8,17 +8,13 @@
 #define samples 256
 
 //function headers
-void gpio_cfg(GPIO* in, GPIO* i2c_SCL, GPIO* i2c_SDA, GPIO* adcInput);
+void gpio_cfg(GPIO* i2c_SCL, GPIO* i2c_SDA, GPIO* adcInput);
 
-void gpio_cfg(GPIO* in, GPIO* i2c_SCL, GPIO* i2c_SDA,	GPIO* adcInput){
+void gpio_cfg(GPIO* i2c_SCL, GPIO* i2c_SDA, GPIO* adcInput){
 	adcInput->GPIOx = GPIOA;
 	adcInput->GPIO_PinNo = 0;
 	adcInput->GPIO_Mode = GPIO_Mode_AN;
 	adcInput->GPIO_PUPD = GPIO_PuPd_NONE;
-	in->GPIOx = GPIOC;
-	in->GPIO_PinNo = 1;
-	in->GPIO_Mode = GPIO_Mode_IN;
-	in->GPIO_PUPD = GPIO_PuPd_DOWN;
 	i2c_SCL->GPIOx = GPIOB;
 	i2c_SCL->GPIO_PinNo = 6;
 	i2c_SCL->GPIO_Mode = GPIO_Mode_AF;
@@ -148,8 +144,7 @@ int main(){
 	RCC->APB1ENR |= (7 << 21); //enable ALL I2C clks
 	
 	GPIO in, i2c_SCL, i2c_SDA, adcInput;
-	gpio_cfg(&in, &i2c_SCL, &i2c_SDA, &adcInput);
-	GPIO_Init(&in); //C1, std input
+	gpio_cfg(&i2c_SCL, &i2c_SDA, &adcInput);
 	GPIO_Init(&adcInput); //A1, ADC1 channel 1
 	GPIO_Init(&i2c_SCL);
 	GPIO_Init(&i2c_SDA);
